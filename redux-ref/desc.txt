@@ -1,0 +1,8 @@
+reducer는 store의 state의 값을 변경함. 이전 state 값과 action을 사용해서 새로운 state를 반환한다.
+dispatch에는 type을 넣어서 보내고, 이 type은 action의 속성이다. dispatch는 reducer 메서드를 호출한다.
+state를 직접 변경하는 것이 아닌 복제본을 변경한 다음 그 복제본을 반환해야 history를 추적할 수 있다.
+state를 바꿀 때마다 render가 화면에 그려주게 한다.
+
+dispatch는 reducer를 호출하기로 약속함.
+dispatch는 action을 전달한다. dispatch({type: '필수', 기타속성 : '..'})
+state가 변할 때마다 화면에 반영되기 위해서는 변화를 인지하는 subscribe를 사용하고, 화면에 쓰는 render를 사용한다.
